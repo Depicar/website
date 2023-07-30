@@ -21,14 +21,14 @@ export default async function RootLayout({
   
   return (
     <html lang="en">
-      <body className="max-w-3xl mx-auto py-20">
+      <body className="max-w-full mx-auto bg-[url('https://cdn.discordapp.com/attachments/692106586147127296/1133918537497444525/IMG_3046.jpg')]">
 
-        <header className="flex items-center justify-between">
+        <header className="h-32 bg-white mb-0 flex items-center justify-between">
           <Link href="/"
-            className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600
-            bg-clip-text text-transparent text-lg font-bold">Charlie
+            className="ml-32 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
+            bg-clip-text text-transparent text-3xl font-bold">Home
           </Link>
-          <div className="flex items-center gap-5 text-sm text-gray-600">
+          <div className="mr-32 flex items-center gap-5 text-3xl text-gray-600">
             {pages.map((page) => (
               <Link key={page._id} href={`/${page.slug}`} className="hover:underline">
                 {page.title}
@@ -36,7 +36,7 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className="py-20">{children}</main>
+        <main className="max-w-6xl mx-auto">{children}</main>
         
         
       </body>
